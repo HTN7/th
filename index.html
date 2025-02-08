@@ -71,6 +71,22 @@
         }
     </style>
 </head>
+      <script>
+    // Khi trang được tải, yêu cầu người dùng nhập tài khoản và mật khẩu.
+    window.onload = function() {
+      // Hiển thị prompt để nhập tài khoản và mật khẩu (cả hai đều là "admin")
+      var username = prompt("Nhập tài khoản:");
+      var password = prompt("Nhập mật khẩu:");
+
+      // Kiểm tra nếu thông tin không khớp, thông báo và ẩn nội dung trang.
+      if(username !== "admin" || password !== "admin"){
+        alert("Tài khoản hoặc mật khẩu không đúng. Bạn không có quyền truy cập trang này.");
+        // Xóa nội dung trang để không cho xem
+        document.body.innerHTML = "";
+      }
+      // Nếu nhập đúng, trang sẽ hiển thị như bình thường và không có tùy chọn thay đổi nội dung.
+    }
+      </script>
 <body>
     <h1>Bộ Sưu Tập Ảnh Dìm</h1>
     <div class="gallery">
